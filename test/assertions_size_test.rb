@@ -4,7 +4,6 @@ class AssertionsSizeTest < Test::Unit::TestCase
 
   include JsonAssert::Assertions
 
-
   def test_counts_array_entries
     assert_json_size %([1,2,3]), 3
   end
@@ -24,6 +23,5 @@ class AssertionsSizeTest < Test::Unit::TestCase
   def test_at_a_path
     assert_json_size %({"one":[1,2,3]}), 3, :at_path => "one"
   end
-
 
 end

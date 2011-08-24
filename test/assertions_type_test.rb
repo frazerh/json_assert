@@ -42,16 +42,4 @@ class AssertionsTypeTest < Test::Unit::TestCase
     assert_json_type %(10.0), Numeric
   end
 
-  def provides_a_failure_message_for_assert
-    #matcher = assert_json_type(Numeric)
-    #matcher.test?(%("foo"))
-    #matcher.failure_message_for_should.should == "Expected JSON value type to be Numeric, got String"
-  end
-
-  def test_provides_a_failure_message_for_assert_not
-    #matcher = assert_json_type(Numeric)
-    #matcher.test?(%(10))
-    #matcher.failure_message_for_should_not.should == "Expected JSON value type to not be Numeric, got Fixnum"
-  end
-
 end
