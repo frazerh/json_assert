@@ -6,10 +6,10 @@ Gem::Specification.new do |s|
   s.name        = "json_assert"
   s.version     = JsonAssert::VERSION
   s.authors     = ["Frazer Horn"]
-  s.email       = ["frazer@assistly.com"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.email       = ["frazer.horn@gmail.com"]
+  s.homepage    = "https://github.com/frazerh/json_assert"
+  s.summary     = %q{Easily handle JSON in Test::Unit}
+  s.description = %q{Easily handle JSON in Test::Unit}
 
   s.rubyforge_project = "json_assert"
 
@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+  s.add_dependency "multi_json", "~> 1.0.0"
+  s.add_development_dependency "rake", "~> 0.9"
+
 end
