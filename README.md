@@ -2,7 +2,8 @@ json_assert
 ========
 Easily handle JSON in Test::Unit.  
 This is completely copied from the excellent json_spec gem found here https://github.com/collectiveidea/json_spec
-I just wanted the same features for a project where rspec was not available
+
+I wanted the same features for a project where rspec was not available
 
 Installation
 ------------
