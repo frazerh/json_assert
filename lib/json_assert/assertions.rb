@@ -125,11 +125,16 @@ module JsonAssert
         return true
       end
 
+      
       def find_key_value_pair(json, key, value)
         json.each do |k, v|
           return true if k == key && v==value
           if v.is_a?(Hash)
             return true if find_key_value_pair(v, key, value)
+          elsif v.is_a?(Array)
+            v.each do |val|
+              return true if val.is_a?(Hash) && find_key_value_pair(val, key, value)
+            end
           end
         end
         return false
